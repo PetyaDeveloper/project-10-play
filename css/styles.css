@@ -1,0 +1,148 @@
+/* PLAY WITH THE POP UP WINDOW*/
+.personFull p{
+    font-size: 1em;
+    color: lawngreen;
+}
+.personFull{
+    list-style: none;
+    text-align: center;
+}
+.popup{
+    display:none;
+    position: fixed;
+    
+    top: 100;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: bisque;
+}
+.popup-content{
+  
+    margin: auto;
+    background: orange;
+    max-width: 500px;
+    max-height: 300px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+*{
+    padding: 0;
+}
+body{
+    background-color: #e0ebeb;
+    }
+
+.js ul{
+    width: 80%;
+    margin: 2% 10%;
+}
+.title h1{
+    color: grey;
+    text-align: center;
+    margin: 15px 10px;
+    font-size: 1.5em;
+/*   s*/
+    font-weight: 300;
+    
+}
+.person{
+    list-style-type: none;
+    background-color: #fff;
+    width: 100%;
+}
+
+.person img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 15px 0 15px 15px;
+    float: left;
+}
+
+.person p{
+    color: grey;
+    font-size: 1em;
+    line-height: .2px;
+    margin: 0;
+}
+.person p:first-child, .person p:last-child{
+    text-transform: capitalize;
+}
+.person p:first-child{
+    font-weight: 700;
+    font-size: 1.2em;
+    font-style: oblique;
+}
+
+/*styling the li items: paragraphs float right*/
+.person {
+/*    border: 2px solid lightgrey;*/
+    box-shadow: 3px 3px lightgrey;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.js li:after{
+    display: table;
+    content: '';
+    clear: both;
+}
+.js ul span{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+
+/*using flex to display 2 and 3 columns:*/
+@media (min-width: 650px){
+    .js ul{
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .person{
+        width: 45%;    
+    }
+    .person p{
+        font-size: .8em;
+        margin: 0;
+    }
+    .js h1{
+        text-align: left;
+        padding-left: 1.4%;
+    }
+/*    style the popup window*/
+    .popup{
+        right: 33%;
+        width: 35%;
+    }
+}
+@media (min-width: 900px){
+    .person{
+        width: 30%;
+    }
+    .person p{
+        font-size: .7em;
+    }
+    .person p:first-child{
+        font-size: .9em
+        font-weight: lighter;
+    }
+}
+
+
+
+
+
+
+/**/
