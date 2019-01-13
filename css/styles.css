@@ -1,36 +1,86 @@
+/* styling the arrows from the popup window */
+#left, #right{
+  padding: 7px;
+  color: pink;
+  cursor: pointer;
+}
+#left{
+  margin-right: 70%;
+}
 /* PLAY WITH THE POP UP WINDOW*/
 .personFull p{
     font-size: 1em;
-    color: lawngreen;
-}
+  }
 .personFull{
     list-style: none;
     text-align: center;
+    line-height: .4em;
+}
+.personFull img{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
 }
 .popup{
     display:none;
     position: fixed;
-    
-    top: 100;
+    left: 10%;
+    top: 0;
     z-index: 1;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: bisque;
-}
+    width: 80%;
+    height: 83%;
+    max-height: 430px;
+    margin: 10% 0 20%;
+    padding: 0;
+    /* overflow: auto; */
+    background: white;
+    border-radius: 10px;
+  }
+  .personFull{
+    margin: 0 auto 20%;
+    padding: 0;
+  }
+  .personFull span p:last-child{
+    padding-bottom: 20px;
+  }
+
 .popup-content{
-  
     margin: auto;
-    background: orange;
     max-width: 500px;
     max-height: 300px;
-    width: 100%;
+    width: 80%;
+    height: 70%;
     border-radius: 10px;
 }
+#close{
+    padding: 10px;
+    margin: 200% 10% 0 90%;
+    cursor: pointer;
+}
+.personExtraData{
+  padding-top: 15px;
+  border-top: 2px solid lightgrey;
+  padding-bottom: 5px;
+  height: 100%;
+  line-height: .8em;
+}
 
+/* add a hover state to the li itmes */
+.person{
+  transition: transform .5s ease-out, opacity 1.5s ease-out;
+}
+.person:hover{
+  transform: rotate(-10deg);
+  opacity: .2;
+  cursor: pointer;
+}
+
+
+/*general*/
 *{
     padding: 0;
 }
+
 body{
     background-color: #e0ebeb;
     }
@@ -39,19 +89,23 @@ body{
     width: 80%;
     margin: 2% 10%;
 }
+
 .title h1{
     color: grey;
     text-align: center;
-    margin: 15px 10px;
+    /* margin: 15px 10px; */
     font-size: 1.5em;
-/*   s*/
     font-weight: 300;
-    
+    /* display: inline-block; */
 }
-.person{
-    list-style-type: none;
-    background-color: #fff;
-    width: 100%;
+/* styling the input */
+#search{
+  display:block;
+  margin: 0 auto 20px;
+  height: 30px;
+  width: 40%;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .person img{
@@ -64,11 +118,17 @@ body{
 
 .person p{
     color: grey;
-    font-size: 1em;
-    line-height: .2px;
+    font-size: 1.3em;
+    line-height: .6em;
     margin: 0;
 }
-.person p:first-child, .person p:last-child{
+/* person span{
+  line-height: .4em;
+  font-size: 1.4em;
+} */
+.person p:first-child, .person p:last-child,
+.personFull p:first-child, .personFull p:last-child,
+.address{
     text-transform: capitalize;
 }
 .person p:first-child{
@@ -77,9 +137,15 @@ body{
     font-style: oblique;
 }
 
+ /* bug fixing: on longer address in personExtraData, letters r on top of each other */
+
+
 /*styling the li items: paragraphs float right*/
 .person {
 /*    border: 2px solid lightgrey;*/
+    list-style-type: none;
+    background-color: #fff;
+    width: 100%;
     box-shadow: 3px 3px lightgrey;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -97,12 +163,15 @@ body{
     flex-direction: column;
     vertical-align: middle;
     justify-content: space-around;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 /*using flex to display 2 and 3 columns:*/
 @media (min-width: 650px){
-    .js ul{
+  .title h1{
+       margin-left: 2.5%;
+  }
+  .js ul{
         margin: 0;
         width: 100%;
         display: flex;
@@ -111,7 +180,7 @@ body{
         justify-content: space-around;
     }
     .person{
-        width: 45%;    
+        width: 45%;
     }
     .person p{
         font-size: .8em;
@@ -123,21 +192,48 @@ body{
     }
 /*    style the popup window*/
     .popup{
-        right: 33%;
-        width: 35%;
+        width: 30%;
+        left: 35%;
     }
 }
-@media (min-width: 900px){
+@media (min-width: 1124px){
+  .title h1{
+    text-align: left;
+     margin-left: 2.2%;
+  }
     .person{
         width: 30%;
+        height: 150px;
     }
     .person p{
-        font-size: .7em;
+        font-size: 1em;
+    }
+    .js ul span{
+      padding: 30px 0;
     }
     .person p:first-child{
         font-size: .9em
         font-weight: lighter;
     }
+    .person img{
+      margin-top: 28px;
+    }
+    /* style the input search */
+    .title {
+      display: flex;
+      vertical-align: middle;
+      justify-content: space-around;
+    }
+    #search{
+      margin-top: 16.08px;
+    }
+
+    /* .title h1{
+      display: inline-block;
+    }
+    #search{
+      display: inline-block;
+    } */
 }
 
 
