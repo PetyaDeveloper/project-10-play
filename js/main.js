@@ -32,14 +32,16 @@
                $(personHTML).removeClass('person').addClass('personFull');
                $(personHTML).children('div').show();
             //   make the body behind the popup window darker
-               $('ul, .person, body').css('background-color', 'darkgrey');
-              // $('ul, .person, body').fadeTo( 1.2s,.2);
-           });
+               $('ul, .person').css('opacity', '.5');
+               $('ul, .person, body').css('background-color', '#527a7a');
+               $('.personFull').css('opacity', '1');
+          });
         });
         $('#close').on('click',function(){
            $(popup).hide();
            $('.person').css('background-color', 'white');
             $('body, ul').css('background-color', '#e0ebeb');
+            $('ul, .person, body').css('opacity', '1');
         });
         // search bar:
         // function searchEmployee(){
