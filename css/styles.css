@@ -39,6 +39,7 @@
     background: #fff;
     border-radius: 10px;
   }
+
 .popup-content-text{
     width: 100%;
 }
@@ -172,6 +173,19 @@ body{
     padding: 20px 0;
 }
 
+/** STYLING THE ARROW BTNS   **/
+
+.bwd, .fwd{
+  background:powderblue;
+  border-radius: 10px;
+  padding:  5px 20px;
+  display: inline-block;
+}
+
+.arrows{
+  display: flex;
+  justify-content: space-between;
+}
 /*using flex to display 2 and 3 columns:*/
 /***********************************************/
 @media (min-width: 650px){

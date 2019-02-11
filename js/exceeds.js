@@ -20,3 +20,10 @@ function myFunction(){
 $('input').on('keyup', function(){
    myFunction(); 
 });
+
+//move back through employee detail window when the popup window is open
+$(document).ready(function(){
+   $('.popup').on('click',function(){
+      alert('bu');
+   });
+});
